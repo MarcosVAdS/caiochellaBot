@@ -1,6 +1,4 @@
 import telegram
-import configparser
-import redis
 from telegram.ext import Updater, CommandHandler, Handler
 import datetime 
 from conf.settings import TELEGRAM_TOKEN
