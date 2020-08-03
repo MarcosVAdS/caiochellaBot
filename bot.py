@@ -22,11 +22,14 @@ class Bot:
                         reply_markup=reply_kb_markup)
 
     def calculateDate(self):
-        return abs((self.d2 - self.d1).days)
+        if self.d1>self.d2:
+            return "Desculpa, mas o aniversário já passou!"
+        else:
+            return 'faltam só '+ str(abs((self.d2 - self.d1).days)) + ' dias pro rock doido 😎!'
     
     def data(self, bot, update):
-        data = str(self.calculateDate())
-        bot.send_message(chat_id=update.message.chat_id, text= 'faltam só ' + data + ' dias' + ' pro rock doido 😎!')
+        msg = self.calculateDate()
+        bot.send_message(chat_id=update.message.chat_id, text= msg)
 
 bot = Bot()
 updater = Updater(token=TELEGRAM_TOKEN)
