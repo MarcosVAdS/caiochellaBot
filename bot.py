@@ -9,10 +9,10 @@ class Bot:
         self.d2 = datetime.datetime.strptime('2020-08-21', '%Y-%m-%d')
         self.d1 = datetime.datetime.now()
 
-        self.msg = "Fala manx 😎!\n"
+        self.msg = "Fala😎!\n"
         self.msg += "Me pergunta e eu te digo quanto tempo falta pro Caiochella!.\n"
         self.msg += "Pra isso é só digitar /quanto. \n"
-        self.msg += "Afinal, tu não és leso de perder, né?!😉\n"
+        self.msg += "Afinal, tu não vai perder, né?!😉\n"
 
 
     def start(self, bot, update):
